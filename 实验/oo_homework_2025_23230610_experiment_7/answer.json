@@ -1,0 +1,18 @@
+{
+  "1": [
+    "-ask2send(packageId: int): void",
+    "+takePackage(packageId: int): boolean",
+    "-workerId: Integer",
+    "Dispatcher",
+    "sendPackage",
+    "storage.size() == CAPACITY"
+  ],
+  "2": [
+    "STORAGE_CNT",
+    "courierComeBack(courierId);",
+    "ask2send(packageId);",
+    "takePackage(int packageId)",
+    "packageId",
+    "b && !sendList.isEmpty()"
+  ]
+}

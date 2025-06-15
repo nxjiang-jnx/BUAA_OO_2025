@@ -1,0 +1,25 @@
+{
+    "Enumeration": [
+        "VehicleType(FUEL, ELECTRIC)",
+        "ShiftType(MORNING, AFTERNOON, NIGHT)",
+        "RouteStatus(NORMAL, CANCELED)"
+    ],
+    "Class": [
+        "Bus(String: licensePlate, VehicleType: type, int: maxCapacity, double: fuelLevel, double: batteryLevel)",
+        "Driver(int: id, String: name, char: gender, int: age)",
+        "BusStop(String: name, String: location)",
+        "Route(int: routeNumber, BusStop: startStop, BusStop: endStop, List<BusStop>: intermediateStops)",
+        "Schedule(int: id, LocalDate: date, int: routeNumber, String: busLicensePlate, ShiftType: shift, LocalTime: departureTime, int: driverId, String: driverName, RouteStatus: status)"
+    ],
+    "Relationship": [
+        "Bus associates VehicleType",
+        "Bus associates *Schedule",
+        "Driver associates *Schedule",
+        "Schedule associates Route",
+        "Schedule associates Bus",
+        "Schedule associates Driver",
+        "Schedule associates ShiftType",
+        "Schedule associates RouteStatus",
+        "Route associates *BusStop"
+    ]
+}
